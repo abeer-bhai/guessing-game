@@ -1,0 +1,29 @@
+<html>
+<head>
+  <title>Epico guessing game!!!!!</title>
+  <script>
+  var number = Math.floor(Math.random() * 100 + 1 );
+function checkGuess () {
+  var guess = document.getElementById("Guess").value;
+  var msg ="";
+  if (guess > number)
+  msg = guess +"was to high try again loser!!!!!!!!!!! >:";
+  else if (guess < number)
+  msg =guess + "was to low try again loser!!!!!!!!!!! >:";
+  else
+   msg =guess +"Yay you finally won at something!!!!!!";
+ var output = document.getElementById("output")
+ output.innerHTML= msg;
+}
+</script>
+</head>
+<body>
+<h1>Epico guessing game!! by MR.Arnav Mishra ™  </h1>
+<form onsubmit="checkGuess();return false;">
+  Enter a number bettween 1-100:
+  <input type= "text " id="Guess" size= "4">
+  <button type="button" onclick="checkGuess ()">Guess my little freind </button>
+  </form>
+  <h3 id="output">Guess and press my friend</h3>
+  </body>
+  <html>
